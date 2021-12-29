@@ -13,7 +13,7 @@ public class TextGame : MonoBehaviour
     void Start()
     {
         Debug.Log("Witaj w mojej grze");
-        Debug.Log("Wymyœl  w g³owie liczbê od 1 do 100");
+        Debug.Log("Wymyœl  w g³owie liczbê od 1 do 1000");
         Debug.Log("Czy twoja liczba jest wiêksza od 500?");
         Debug.Log("Nacisnij górn¹ stra³kê jeœli twoja liczba jest wiêksza \n" +
                  "Naciœnij doln¹ strza³kê jeœli jest mniejsza \n");
