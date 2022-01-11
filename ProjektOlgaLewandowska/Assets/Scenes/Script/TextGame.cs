@@ -12,9 +12,10 @@ public class TextGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        guess = (min + max) / 2;
         Debug.Log("Witaj w mojej grze");
-        Debug.Log("Wymyœl  w g³owie liczbê od 1 do 1000");
-        Debug.Log("Czy twoja liczba jest wiêksza od 500?");
+        Debug.Log("Wymyœl  w g³owie liczbê od  "+min+" do  "+max);
+        Debug.Log("Czy twoja liczba jest wiêksza od " +guess);
         Debug.Log("Nacisnij górn¹ stra³kê jeœli twoja liczba jest wiêksza \n" +
                  "Naciœnij doln¹ strza³kê jeœli jest mniejsza \n");
         Debug.Log("Naciœnij enter jeœli jest równa czyli program zgadnie twoj¹ liczbê ");
@@ -27,19 +28,25 @@ public class TextGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("góra");
+           
             min = guess;
             guess = (min + max) / 2;
-            Debug.Log("Czy twoja liczba jest wieksza od ?");
+            Debug.Log("Czy twoja liczba jest wieksza od " +guess );
+           
 
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log("dó³");
+            
+            max = guess;
+            guess = (min + max) / 2;
+            Debug.Log("Czy twoja liczba jest wieksza od " +guess);
+           
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("enter");
+            
+            Debug.Log("Zgadlem twoja liczbe! Jestem superkomputerem z chin!");
         }
     }
 }
